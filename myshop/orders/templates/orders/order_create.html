@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
 <h1>Оформление заказа</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Оформить</button>
+</form>
 <h1>Спасибо за заказ!</h1>
 <p>Ваш номер заказа: {{ order.id }}</p>
 <a href="{% url 'products:product_list' %}">Продолжить покупки</a>
-
-</form>
-</body>
-</html>
+{% endblock %}
