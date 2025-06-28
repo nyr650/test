@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}HexaShop{% endblock %}</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- другие CSS -->
+</head>
+<body>
+
+  {% block content %}
+  <!-- сюда вставим контент страниц -->
+  {% endblock %}
+
+  <!-- JS -->
+  <script src="{% static 'js/main.js' %}"></script>
+  <!-- другие скрипты -->
+</body>
+</html>
