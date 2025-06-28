@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
 <form action="{% url 'cart:cart_add' product.id %}" method="post">
     {% csrf_token %}
     {{ cart_product_form.quantity.label_tag }} {{ cart_product_form.quantity }}
     {{ cart_product_form.update }}
     <button type="submit">Добавить в корзину</button>
 </form>
-</body>
-</html>
+{% endblock %}

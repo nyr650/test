@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 {% extends 'base.html' %}
 {% block content %}
   <h2>Оставить отзыв о "{{ product.name }}"</h2>
@@ -14,6 +7,3 @@
     <button type="submit">Отправить</button>
   </form>
 {% endblock %}
-</body>
-</html>
-<a href="{% url 'add_review' product.id %}">Оставить отзыв</a>
